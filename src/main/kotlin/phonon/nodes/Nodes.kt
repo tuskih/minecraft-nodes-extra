@@ -197,6 +197,22 @@ public object Nodes {
         }
     }
 
+    internal fun ensureDataFiles() {
+        try {
+            Files.createDirectories(Paths.get(Config.pathPlugin).normalize())
+            if (!Files.exists(Config.pathWorld)) {
+                val worldJson = "{\"nodes\":{},\"territories\":{}}"
+                saveStringToFile(worldJson, Config.pathWorld)
+            }
+            if (!Files.exists(Config.pathTowns)) {
+                val townsJson = "{\"meta\":{\"type\":\"towns\"},\"residents\":{},\"towns\":{},\"nations\":{}}"
+                saveStringToFile(townsJson, Config.pathTowns)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
     /**
      * Reload background managers/tasks
      */
