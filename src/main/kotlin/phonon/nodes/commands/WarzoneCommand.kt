@@ -20,23 +20,23 @@ public class WarzoneCommand :
     TabCompleter {
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<String>): Boolean {
         if (!sender.hasPermission("nodes.admin")) {
-            Message.error(sender, "Você não tem permissão pra fazer isso.")
+            Message.error(sender, "You do not have permission to do that.")
             return true
         }
 
         if (args.isEmpty()) {
-            Message.error(sender, "Uso: /warzone id1,id2,id3 duração_minutos | /warzone stop")
+            Message.error(sender, "Use: /warzone id1,id2,id3 durationinminutes | /warzone stop")
             return true
         }
 
         if (args.size == 1 && args[0].equals("stop", ignoreCase = true)) {
             WarzoneManager.stop()
-            Message.print(sender, "Warzone parada")
+            Message.print(sender, "Warzone stopped.")
             return true
         }
 
         if (args.size < 2) {
-            Message.error(sender, "Uso: /warzone id1,id2,id3 duração_minutos")
+            Message.error(sender, "Use: /warzone id1,id2,id3 duração_minutos")
             return true
         }
 
@@ -45,7 +45,7 @@ public class WarzoneCommand :
         for (token in idTokens) {
             val num = token.toIntOrNull()
             if (num == null) {
-                Message.error(sender, "Id de território inválido \"$token\"")
+                Message.error(sender, "Invalid territory id \"$token\".")
                 return true
             }
             ids.add(TerritoryId(num))
@@ -53,12 +53,12 @@ public class WarzoneCommand :
 
         val duration = args[1].toIntOrNull()
         if (duration == null || duration <= 0) {
-            Message.error(sender, "Duração inválida \"${args[1]}\"")
+            Message.error(sender, "Invalid duration \"${args[1]}\";")
             return true
         }
 
         WarzoneManager.start(ids, duration)
-        Message.print(sender, "Warzone ativada para ${ids.size} territórios por $duration minutos")
+        Message.print(sender, "Warzone activated for ${ids.size} for $duration minutes")
         return true
     }
 
