@@ -20,9 +20,7 @@ import phonon.nodes.objects.Town.TownSaveState
 
 public object Serializer {
 
-    private fun escapeJson(s: String): String {
-        return s.replace("\\", "\\\\").replace("\"", "\\\"")
-    }
+    private fun escapeJson(s: String): String = s.replace("\\", "\\\\").replace("\"", "\\\"")
 
     fun worldToJson(
         residents: List<ResidentSaveState>,

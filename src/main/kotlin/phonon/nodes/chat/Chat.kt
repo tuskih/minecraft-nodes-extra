@@ -7,6 +7,7 @@ package phonon.nodes.chat
 import org.bukkit.ChatColor
 import org.bukkit.entity.Player
 import org.bukkit.event.player.AsyncPlayerChatEvent
+import phonon.nodes.Message
 import phonon.nodes.Nodes
 import phonon.nodes.objects.Resident
 

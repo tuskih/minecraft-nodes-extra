@@ -869,7 +869,7 @@ public class TownCommand :
             }
 
             Nodes.addResidentToTown(town, applicant)
-            
+
             // Cancel the application timeout task
             town.applications[applicant]?.cancel()
             town.applications.remove(applicant)

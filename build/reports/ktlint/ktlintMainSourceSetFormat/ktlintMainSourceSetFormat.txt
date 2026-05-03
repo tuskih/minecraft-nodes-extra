@@ -1,0 +1,10 @@
+[90mC:\Users\danie\Desktop\minecraft-nodes-extra\src\main\kotlin\phonon\nodes\commands\[0mTownCommand.kt[90m:[0m872[90m:1:[0m Trailing space(s) [90m(standard:no-trailing-spaces)[0m
+[90mC:\Users\danie\Desktop\minecraft-nodes-extra\src\main\kotlin\phonon\nodes\listeners\[0mNodesChestProtectListener.kt[90m:[0m25[90m:1:[0m Unused import [90m(standard:no-unused-imports)[0m
+[90mC:\Users\danie\Desktop\minecraft-nodes-extra\src\main\kotlin\phonon\nodes\[0mNodes.kt[90m:[0m275[90m:1:[0m Trailing space(s) [90m(standard:no-trailing-spaces)[0m
+[90mC:\Users\danie\Desktop\minecraft-nodes-extra\src\main\kotlin\phonon\nodes\[0mNodes.kt[90m:[0m1600[90m:7:[0m Trailing space(s) [90m(standard:no-trailing-spaces)[0m
+[90mC:\Users\danie\Desktop\minecraft-nodes-extra\src\main\kotlin\phonon\nodes\serdes\[0mSerializer.kt[90m:[0m23[90m:47:[0m Function body should be replaced with body expression [90m(standard:function-expression-body)[0m
+
+Summary error count (descending) by rule:
+  standard:no-trailing-spaces: 3
+  standard:function-expression-body: 1
+  standard:no-unused-imports: 1

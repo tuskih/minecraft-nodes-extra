@@ -272,7 +272,7 @@ public object Nodes {
                     viewer.closeInventory()
                 }
             }
-            
+
             val result = town.income.pushToStorage(true)
             if (result == true) { // has moved items
                 town.needsUpdate()
@@ -1598,7 +1598,7 @@ public object Nodes {
                         Nodes.needsSave = true
                     }
                 }
-                
+
                 // ALWAYS check if town over claims status changed due to power ramp
                 val isOverClaimsMax = town.claimsUsed > town.claimsMax
                 if (town.isOverClaimsMax != isOverClaimsMax) {
